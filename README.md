@@ -1,13 +1,17 @@
 
 # nestjs Template
+一个 nestjs 的模板
 
-# 集成
+<p align="middle">
+<img src="https://fastly.jsdelivr.net/gh/suemor233/static@main/img/nest-template.jpg" width="1000" alt="项目" />
+</p>
 
+## 技术栈
 - Typeorm
-- mongodb
-- jwt
-- pnpm
-# 使用
+- Mongodb
+- Pnpm
+- Jwt
+## 使用
 ```sh
 pnpm i
 pnpm dev
