@@ -9,8 +9,6 @@
 ## 技术栈
 - Typeorm
 - Mongodb
-- Pnpm
-- Jwt
 ## 使用
 ```sh
 pnpm i
