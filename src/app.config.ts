@@ -8,7 +8,7 @@ export const CROSS_DOMAIN = {
 }
 
 export const MONGO_DB = {
-  dbName: 'temp233',
+  dbName: 'test12345',
   host: 'localhost',
   port: 27017,
   get uri() {
