@@ -1,5 +1,5 @@
 import { isDev } from './global/env.global'
-
+import { argv } from 'zx-cjs'
 export const PORT = 2349
 export const API_VERSION = 2
 
@@ -9,7 +9,7 @@ export const CROSS_DOMAIN = {
 
 export const MONGO_DB = {
   dbName: 'test12345',
-  host: 'localhost',
+  host: argv.db_host || '127.0.0.1',
   port: 27017,
   get uri() {
     return `mongodb://${this.host}:${this.port}/${this.dbName}`
