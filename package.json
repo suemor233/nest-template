@@ -14,7 +14,7 @@
     "bundle": "rimraf out && npm run build && cd dist/src && npx ncc build main.js -o ../../out -m && cd ../.. && chmod +x out/index.js",
     "dev": "npm run start",
     "start:debug": "nest start --debug --watch",
-    "start:prod": "node dist/main",
+    "start:prod": "cross-env NODE_ENV=production node dist/main.js",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
     "test": "jest",
     "test:watch": "jest --watch",
