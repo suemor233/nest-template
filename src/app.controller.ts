@@ -1,12 +1,21 @@
 import { Controller, Get } from '@nestjs/common';
-import { AppService } from './app.service';
-
+import { ApiTags } from '@nestjs/swagger';
+import PKG from '../package.json'
 @Controller()
+@ApiTags('Root')
 export class AppController {
-  constructor(private readonly appService: AppService) {}
-
-  @Get()
-  getHello(): string {
-    return this.appService.getHello();
+  @Get(['/', '/info'])
+  async appInfo() {
+    return {
+      name: PKG.name,
+      author: PKG.author,
+      version: PKG.version,
+    }
   }
+
+  @Get('/ping')
+  ping(): 'pong' {
+    return 'pong'
+  }
+
 }
