@@ -1,6 +1,6 @@
 import { isDev } from './global/env.global'
 
-export const PORT = process.env.PORT || 2346
+export const PORT = 2349
 export const API_VERSION = 2
 
 export const CROSS_DOMAIN = {
