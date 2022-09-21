@@ -1,45 +1,45 @@
-import { BadRequestException, ForbiddenException, Injectable } from '@nestjs/common';
-import { InjectRepository } from '@nestjs/typeorm';
-import { Repository } from 'typeorm';
-import { UserOptionDto } from './user.dto';
-import { User } from './user.entity';
+import { compareSync, hashSync } from 'bcrypt'
+import { Model } from 'mongoose'
 import { nanoid } from 'nanoid'
-import { hashSync,compareSync } from 'bcrypt'
-import { sleep } from '~/utils/tool.util';
+
+import {
+  BadRequestException,
+  ForbiddenException,
+  Injectable,
+} from '@nestjs/common'
+import { InjectModel } from '@nestjs/mongoose'
+
+import { UserModel } from '~/modules/user/user.model'
+import { HttpService } from '~/processors/helper/helper.http.service'
+import { sleep } from '~/utils/tool.util'
+
+import { UserDto } from './user.dto'
 
 @Injectable()
 export class UserService {
   constructor(
-    @InjectRepository(User)
-    private usersRepository: Repository<User>
+    @InjectModel(UserModel.name)
+    private readonly userModel: Model<UserModel>,
+    private readonly httpServie: HttpService,
   ) {}
-
-  async createUser(user: UserOptionDto) {
+  async createUser(user: UserDto) {
     const hasMaster = await this.hasMaster()
 
-    // 禁止注册两个以上账户
     if (hasMaster) {
       throw new BadRequestException('我已经有一个主人了哦')
     }
     user.password = hashSync(user.password, 6)
     const authCode = nanoid(10)
 
-    const res = await this.usersRepository.save({
+    const res = await this.userModel.create({
       ...user,
-      authCode
+      authCode,
     })
     return { username: res.username, authCode: res.authCode }
   }
 
   async login(username: string, password: string) {
-    const user = await this.usersRepository.findOne({
-      where: {
-        username
-      },
-      select:{
-        password:true
-      }
-    })
+    const user = await this.userModel.findOne({ username }).select('+password')
     if (!user) {
       await sleep(1000)
       throw new ForbiddenException('用户名不正确')
@@ -52,13 +52,7 @@ export class UserService {
     return user
   }
 
-  findAll(): Promise<User[]> {
-    return this.usersRepository.find();
-  }
-
-
-
   async hasMaster() {
-    return !!(await this.usersRepository.count())
+    return !!(await this.userModel.count())
   }
 }

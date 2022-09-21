@@ -6,9 +6,10 @@ import { AllExceptionsFilter } from './common/filters/any-exception.filter'
 import { ResponseInterceptor } from './common/interceptors/response.interceptor'
 import { UserModule } from './modules/user/user.module'
 import { DatabaseModule } from './processors/database/database.module'
+import { HelperModule } from './processors/helper/helper.module'
 
 @Module({
-  imports: [DatabaseModule, UserModule],
+  imports: [DatabaseModule, UserModule,HelperModule],
   controllers: [AppController],
   providers: [
     {

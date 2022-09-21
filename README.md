@@ -7,7 +7,7 @@
 </p>
 
 ## 技术栈
-- Typeorm
+- Mongoose
 - Mongodb
 ## 使用
 ```sh

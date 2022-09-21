@@ -1,6 +1,9 @@
+import { MongooseModule, SchemaFactory } from '@nestjs/mongoose'
+import { UserModel } from '~/modules/user/user.model'
 
-import { User } from '~/modules/user/user.entity';
 
-export const databaseModels = [
-  User
-]
+export const databaseModels = [UserModel].map((model:any) =>
+  MongooseModule.forFeature([
+    { name: model.name, schema: SchemaFactory.createForClass(model) },
+  ])
+)

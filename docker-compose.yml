@@ -2,14 +2,14 @@ version: '3.8'
 
 services:
   app:
-    container_name: nest-template
-    build: .
+    container_name: LostAndFound-Core
+    image: suemor/lost-and-found:latest
     command: node index.js --db_host=mongo --color
     environment:
       - TZ=Asia/Shanghai
       - NODE_ENV=production
     volumes:
-      - ./data/nest-template:/root/.nest-template
+      - ./data/lost-found-api:/root/.lost-found-api
     ports:
       - '2349:2349'
     depends_on:
