@@ -14,7 +14,7 @@ specifiers:
   '@suemor/eslint-config-ts': 1.0.1
   '@suemor/prettier': 1.0.1
   '@types/express': 4.17.14
-  '@types/jest': 27.4.0
+  '@types/jest': 27.4.1
   '@types/node': 16.11.66
   '@types/supertest': 2.0.12
   '@typescript-eslint/eslint-plugin': 5.40.1
@@ -80,7 +80,7 @@ devDependencies:
   '@suemor/eslint-config-ts': 1.0.1_typescript@4.8.4
   '@suemor/prettier': 1.0.1
   '@types/express': 4.17.14
-  '@types/jest': 27.4.0
+  '@types/jest': 27.4.1
   '@types/node': 16.11.66
   '@types/supertest': 2.0.12
   '@typescript-eslint/eslint-plugin': 5.40.1_ukgdydjtebaxmxfqp5v5ulh64y
@@ -94,7 +94,7 @@ devDependencies:
   prettier: 2.7.1
   source-map-support: 0.5.21
   supertest: 6.3.0
-  ts-jest: 27.1.5_rmwo7dcd5dpkatqafwm4xpahuq
+  ts-jest: 27.1.5_xerqtbejmnw475lu34ngccv2su
   ts-loader: 9.4.1_typescript@4.8.4
   ts-node: 10.9.1_gy6k6bedrshoc5b4zgt3uehy7q
   tsconfig-paths: 3.14.1
@@ -1318,10 +1318,10 @@ packages:
       '@types/istanbul-lib-report': 3.0.0
     dev: true
 
-  /@types/jest/27.4.0:
-    resolution: {integrity: sha512-gHl8XuC1RZ8H2j5sHv/JqsaxXkDDM9iDOgu0Wp8sjs4u/snb2PVehyWXJPr+ORA0RPpgw231mnutWI1+0hgjIQ==}
+  /@types/jest/27.4.1:
+    resolution: {integrity: sha512-23iPJADSmicDVrWk+HT58LMJtzLAnB2AgIzplQuq/bSrGaxCrlvRFjGbXmamnnk/mAmCdLStiGqggu28ocUyiw==}
     dependencies:
-      jest-diff: 27.5.1
+      jest-matcher-utils: 27.5.1
       pretty-format: 27.5.1
     dev: true
 
@@ -5920,7 +5920,7 @@ packages:
     hasBin: true
     dev: true
 
-  /ts-jest/27.1.5_rmwo7dcd5dpkatqafwm4xpahuq:
+  /ts-jest/27.1.5_xerqtbejmnw475lu34ngccv2su:
     resolution: {integrity: sha512-Xv6jBQPoBEvBq/5i2TeSG9tt/nqkbpcurrEG1b+2yfBrcJelOZF9Ml6dmyMh7bcW9JyFbRYpR5rxROSlBLTZHA==}
     engines: {node: ^10.13.0 || ^12.13.0 || ^14.15.0 || >=15.0.0}
     hasBin: true
@@ -5941,7 +5941,7 @@ packages:
       esbuild:
         optional: true
     dependencies:
-      '@types/jest': 27.4.0
+      '@types/jest': 27.4.1
       bs-logger: 0.2.6
       fast-json-stable-stringify: 2.1.0
       jest: 27.5.1_ts-node@10.9.1
