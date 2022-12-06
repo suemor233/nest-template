@@ -20,7 +20,7 @@ specifiers:
   '@typescript-eslint/eslint-plugin': 5.45.1
   '@typescript-eslint/parser': 5.45.1
   '@vercel/ncc': 0.34.0
-  axios: 1.2.0
+  axios: 1.2.1
   axios-retry: 3.3.1
   bcrypt: 5.1.0
   class-transformer: 0.5.1
@@ -57,7 +57,7 @@ dependencies:
   '@nestjs/platform-express': 8.4.7_7tsmhnugyerf5okgqzer2mfqme
   '@nestjs/swagger': 6.1.3_jgos3tknxr3npmt3x2cmlilqyq
   '@vercel/ncc': 0.34.0
-  axios: 1.2.0
+  axios: 1.2.1
   axios-retry: 3.3.1
   class-transformer: 0.5.1
   class-validator: 0.13.2
@@ -2015,8 +2015,8 @@ packages:
     transitivePeerDependencies:
       - debug
 
-  /axios/1.2.0:
-    resolution: {integrity: sha512-zT7wZyNYu3N5Bu0wuZ6QccIf93Qk1eV8LOewxgjOZFd2DenOs98cJ7+Y6703d0wkaXGY6/nZd4EweJaHz9uzQw==}
+  /axios/1.2.1:
+    resolution: {integrity: sha512-I88cFiGu9ryt/tfVEi4kX2SITsvDddTajXTOFmt2uK1ZVA8LytjtdeyefdQWEf5PU8w+4SSJDoYnggflB5tW4A==}
     dependencies:
       follow-redirects: 1.15.1
       form-data: 4.0.0
