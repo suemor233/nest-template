@@ -29,7 +29,6 @@ export async function bootstrap() {
   if (isDev) {
     app.useGlobalInterceptors(new LoggingInterceptor())
   }
-
   app.useGlobalPipes(
     new ValidationPipe({
       transform: true,

@@ -9,7 +9,7 @@ import { DatabaseModule } from './processors/database/database.module'
 import { HelperModule } from './processors/helper/helper.module'
 
 @Module({
-  imports: [DatabaseModule, UserModule,HelperModule],
+  imports: [DatabaseModule, UserModule, HelperModule],
   controllers: [AppController],
   providers: [
     {
@@ -18,7 +18,7 @@ import { HelperModule } from './processors/helper/helper.module'
     },
     {
       provide: APP_INTERCEPTOR,
-      useClass: ResponseInterceptor, // 1
+      useClass: ResponseInterceptor, 
     },
   ],
 })
