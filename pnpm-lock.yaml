@@ -14,7 +14,7 @@ specifiers:
   '@suemor/eslint-config-ts': 1.0.1
   '@suemor/prettier': 1.0.1
   '@types/express': 4.17.15
-  '@types/jest': 29.2.4
+  '@types/jest': 29.2.5
   '@types/node': 18.11.18
   '@types/supertest': 2.0.12
   '@typescript-eslint/eslint-plugin': 5.47.1
@@ -82,7 +82,7 @@ devDependencies:
   '@suemor/eslint-config-ts': 1.0.1_typescript@4.9.4
   '@suemor/prettier': 1.0.1
   '@types/express': 4.17.15
-  '@types/jest': 29.2.4
+  '@types/jest': 29.2.5
   '@types/node': 18.11.18
   '@types/supertest': 2.0.12
   '@typescript-eslint/eslint-plugin': 5.47.1_txmweb6yn7coi7nfrp22gpyqmy
@@ -1356,8 +1356,8 @@ packages:
       '@types/istanbul-lib-report': 3.0.0
     dev: true
 
-  /@types/jest/29.2.4:
-    resolution: {integrity: sha512-PipFB04k2qTRPePduVLTRiPzQfvMeLwUN3Z21hsAKaB/W9IIzgB2pizCL466ftJlcyZqnHoC9ZHpxLGl3fS86A==}
+  /@types/jest/29.2.5:
+    resolution: {integrity: sha512-H2cSxkKgVmqNHXP7TC2L/WUorrZu8ZigyRywfVzv6EyBlxj39n4C00hjXYQWsbwqgElaj/CiAeSRmk5GoaKTgw==}
     dependencies:
       expect: 29.3.1
       pretty-format: 29.3.1
