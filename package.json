@@ -47,7 +47,7 @@
     "zx-cjs": "7.0.7-0"
   },
   "devDependencies": {
-    "@nestjs/cli": "8.2.8",
+    "@nestjs/cli": "9.5.0",
     "@nestjs/passport": "9.0.3",
     "@nestjs/schematics": "8.0.11",
     "@nestjs/testing": "8.4.7",
